@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Hang Man</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Homemade+Apple|Permanent+Marker" rel="stylesheet">
+>
+</head>
+<body>
+<!-- Game header -->
+<div class="container">
+	<div class="row">
+    	<div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+    		<img class="header" alt="hangman" src="../assets/img/hang.jpg">
+    	</div> <!-- col -->
+    	<div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+      		<h1>Sports Championship <br> Edition</h1>
+    	</div> <!-- col -->
+  	</div> <!-- row -->
+</div><!--container-->
+
+<div class="container">
+  <div class="well well-sm">
+      <section class="instructions">
+        <h2> Choose a letter on the keyboard to guess the word and start the game.</h2> 
+      </section>
+    </div> <!-- well -->
+</div> <!-- container -->
+  
+  <!-- Wins -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+      	<div class="panel panel-success">
+      		<div class="panel-heading">
+  				<h3 class="panel-title">Survived:</h3>
+			</div> <!-- heading -->
+			<div class="panel-body">
+				<h3 id="winCounter">0</h3>
+      		</div> <!-- panel-body -->
+      	</div> <!-- panel -->
+    </div> <!-- col -->
+
+<!-- Losses -->
+    <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+      	<div class="panel panel-danger">
+      		<div class="panel-heading">
+  				<h3 class="panel-title">Hanged:</h3>
+			</div> <!-- heading -->
+			<div class="panel-body">
+				<h3 id="lossCounter">0</h3>
+      		</div> <!-- panel-body -->
+      	</div> <!-- panel -->
+    </div> <!-- col -->
+
+  <!-- Number of guesses remaining -->
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+    	<div class="panel panel-warning">
+    		<div class="panel-heading">
+  				<h3 class="panel-title">Number of guesses remaining:</h3>
+			</div> <!-- heading -->
+			<div class="panel-body">
+				<h3 id="lives"></h3>
+      		</div> <!-- panel-body -->
+		</div> <!-- panel -->
+    </div> <!-- col -->
+
+  <!-- Letters already guessed -->
+    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+    	<div class="panel panel-info">
+      		<div class="panel-heading">
+  				<h3 class="panel-title">Letters already guessed:</h3>
+			</div> <!-- heading -->
+			<div class="panel-body">
+				<h3 id="wrongGuesses"></h3>
+      		</div> <!-- panel-body -->
+      	</div> <!-- panel -->
+    </div> <!-- col -->
+  </div> <!-- row -->
+</div> <!-- container wins and remaining guesses -->          
+  <!-- Current word -->
+<div class="container">  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+  		<h3 class="panel-title">Last 5 champions in either NFL, NCAAF, MLB, NBA or NCAAB</h3>
+	</div> <!-- heading -->
+	<div class="panel-body">
+		<h2 id="wordToGuess">_ _ _ _ _ _</h2> <br>
+    </div> <!-- panel-body -->
+  </div> <!-- panel -->
+</div> <!-- container -->
+
+  <div class="push"></div> <!-- sticky footer -->
+</div> <!-- container -->
+
+  <footer>
+    <div class="container">
+    <small>&copy; Copyright 2017 Khoi Nguyen</small></div>
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/game.js"></script>
+</body>
+</html>
