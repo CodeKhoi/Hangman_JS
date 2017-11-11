@@ -35,3 +35,24 @@ h3 {
 	text-align: center;
  }
 
+ /*Sticky footer*/
+footer,
+.push {
+  height: 150px;
+}
+
+footer {
+	background: #666;
+	clear: both;
+	text-align: center;
+	padding: 25px 0;
+	color: #ccc;
+	border-top: 7px solid #f8ea42;
+}
+
+html, 
+body {
+	margin: 0;
+	height: 100%;
+}
+

@@ -31,8 +31,9 @@ var rightGuessCounter = 0;
 
 //FUNCTIONS
 //============================================
-function reset()
+function reset() 
 {
+
 	//Chooses word randombly from the wordBank
 	choosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	//Splits the choosen word into individual letters
@@ -60,8 +61,9 @@ function reset()
 	startGame();
 }
 
-function startGame()
+function startGame() 
 {
+
 	//Chooses word randombly from the wordBank
 	choosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	//Splits the choosen word into individual letters
@@ -98,14 +100,9 @@ function startGame()
 	document.getElementById('winCounter').innerHTML = winCount;
 	document.getElementById('lossCounter').innerHTML = loseCount;
 	document.getElementById('wrongGuesses').innerHTML = wrongLetters;
-	// Testing / Debugging
-	console.log(choosenWord);
-	console.log(lettersInWord);
-	console.log(numBlanks);
-	console.log(blanksAndSuccesses);
 }
 
-function compareLetters(userKey)
+function compareLetters(userKey) 
 {
 				console.log('WORKING!');
 				//If user key exist in choosen word then perform this function 
@@ -122,8 +119,7 @@ function compareLetters(userKey)
 							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
 						}	
 					}
-					//Test / Debug
-					console.log(blanksAndSuccesses);
+
 				}
 				//Wrong Keys
 				else
@@ -133,16 +129,12 @@ function compareLetters(userKey)
 					//Changes HTML
 					document.getElementById('lives').innerHTML = guessesLeft;
 					document.getElementById('wrongGuesses').innerHTML = wrongLetters;
-					//Test / Debug
-					console.log('Wrong Letters = ' + wrongLetters);
-					console.log('Guesses left are ' + guessesLeft);
 				}
-			
-			
-		
 }
-function winLose()
+
+function winLose() 
 {
+
 	// When number blanks if filled with right words then you win
 	if(rightGuessCounter === numBlanks)
 	{
@@ -179,9 +171,6 @@ document.onkeyup = function(event)
 		if(letterGuessed === doubleWord[i] && test === true)
 		{
 			var spliceDword = doubleWord.splice(i,1);
-			//Test / Debug
-			console.log('Double word is = ' + doubleWord[i])
-			console.log('Spliced Word is = ' + spliceDword);
 
 			compareLetters(letterGuessed);
 			winLose();
